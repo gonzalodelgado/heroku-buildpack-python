@@ -169,6 +169,9 @@ source $BIN_DIR/steps/cryptography
 # GLPK support
 source $BIN_DIR/steps/glpk
 
+# GMP support
+source $BIN_DIR/steps/gmp
+
 # Install dependencies with Pip.
 sub-env $BIN_DIR/steps/pip-install
 

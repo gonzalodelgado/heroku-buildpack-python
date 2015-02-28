@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+source $BIN_DIR/utils
+
+bpwatch start gmp
+
+curl -s -L -o gmp.tar.bz2 http://gnu.c3sl.ufpr.br/ftp/gmp/gmp-5.1.3.tar.bz2
+tar xf gmp.tar.bz2
+cd gmp-5.1.3
+./configure --prefix=$HOME/.heroku/vendor
+make
+make install
+cd -
+rm -rf gmp*
+
+bpwatch stop gmp
