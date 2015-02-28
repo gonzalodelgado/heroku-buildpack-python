@@ -166,6 +166,9 @@ source $BIN_DIR/steps/pylibmc
 # Libffi support.
 source $BIN_DIR/steps/cryptography
 
+# GLPK support
+source $BIN_DIR/steps/glpk
+
 # Install dependencies with Pip.
 sub-env $BIN_DIR/steps/pip-install
 
