@@ -7,7 +7,7 @@ bpwatch start glpk
 curl -s -L -o glpk.tar.gz http://ftp.gnu.org/gnu/glpk/glpk-4.55.tar.gz
 tar xf glpk.tar.gz
 cd glpk-4.55
-./configure
+./configure --prefix=$HOME/.heroku/vendor
 make
 make install
 cd -
